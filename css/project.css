@@ -1,0 +1,242 @@
+/* ========================================
+   PROJECT PAGE
+======================================== */
+
+.project-page {
+    width: min(1200px, 92%);
+    margin: 0 auto;
+    padding: clamp(80px, 10vw, 120px) 0;
+}
+
+
+/* ========================================
+   PROJECT HEADER
+======================================== */
+
+.project-page-header {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 0.9fr)
+        minmax(0, 1.1fr);
+
+    gap: clamp(40px, 7vw, 100px);
+
+    align-items: start;
+
+    padding-bottom: 80px;
+
+    border-bottom: 1px solid var(--border);
+}
+
+
+.project-page-title h1 {
+    max-width: 600px;
+
+    margin-top: 16px;
+
+    color: var(--text);
+
+    font-size: clamp(2.8rem, 5vw, 5rem);
+
+    font-weight: 800;
+
+    line-height: 0.92;
+
+    letter-spacing: -0.05em;
+
+    overflow-wrap: break-word;
+}
+
+
+.project-page-intro {
+    max-width: 650px;
+}
+
+
+.project-page-intro p {
+    margin-bottom: 22px;
+
+    color: var(--text-muted);
+
+    font-size: clamp(1rem, 1.8vw, 1.2rem);
+
+    line-height: 1.7;
+}
+
+
+.project-page-intro p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ========================================
+   PROJECT SECTIONS
+======================================== */
+
+.project-section {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 0.9fr)
+        minmax(0, 1.1fr);
+
+    gap: clamp(40px, 7vw, 100px);
+
+    align-items: start;
+
+    padding: 70px 0;
+
+    border-bottom: 1px solid var(--border);
+}
+
+
+.project-section-label {
+    position: sticky;
+    top: 40px;
+}
+
+
+.project-section-content {
+    max-width: 700px;
+}
+
+
+.project-section-content > p {
+    color: var(--text-muted);
+
+    font-size: 1rem;
+
+    line-height: 1.75;
+}
+
+
+/* ========================================
+   FEATURES
+======================================== */
+
+.project-features {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 16px;
+}
+
+
+.project-feature {
+    margin: 0;
+
+    color: var(--text-muted);
+
+    font-size: 1rem;
+
+    line-height: 1.6;
+}
+
+
+/* ========================================
+   PROJECT LINKS
+======================================== */
+
+.project-links-section {
+    padding: 70px 0 30px;
+}
+
+
+.project-links {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 18px;
+}
+
+
+.project-links a {
+    display: inline-block;
+
+    padding: 14px 20px;
+
+    border: 1px solid var(--border);
+
+    color: var(--text);
+
+    font-size: 0.9rem;
+
+    font-weight: 700;
+
+    transition:
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+.project-links a:hover {
+    color: var(--accent);
+
+    border-color: var(--accent);
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 700px) {
+
+    .project-page {
+        padding: 70px 0;
+    }
+
+
+    .project-page-header {
+        grid-template-columns:
+            minmax(0, 1fr);
+
+        gap: 30px;
+
+        padding-bottom: 60px;
+    }
+
+
+    .project-page-title h1 {
+        font-size: clamp(2.8rem, 12vw, 4.5rem);
+    }
+
+
+    .project-section {
+        grid-template-columns:
+            minmax(0, 1fr);
+
+        gap: 25px;
+
+        padding: 55px 0;
+    }
+
+
+    .project-section-label {
+        position: static;
+    }
+
+
+    .project-section-content > p,
+    .project-feature {
+        font-size: 0.95rem;
+
+        line-height: 1.7;
+    }
+
+
+    .project-links-section {
+        padding: 60px 0 20px;
+    }
+
+
+    .project-links {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+}

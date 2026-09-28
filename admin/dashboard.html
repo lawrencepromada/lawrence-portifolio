@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | Lawrence Pro Mada</title>
+
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+
+<body>
+
+    <main class="admin-page">
+
+        <section class="admin-dashboard">
+
+            <p class="admin-eyebrow">
+                LAWRENCE PRO MADA
+            </p>
+
+            <h1>
+                Dashboard
+            </h1>
+
+            <p class="admin-intro" id="admin-email">
+                Checking authentication...
+            </p>
+
+            <div class="admin-dashboard-actions">
+
+                <a
+                    href="project-editor.html"
+                    class="admin-button"
+                >
+                    Add Project
+                </a>
+
+                <a
+                    href="../pages/projects.html"
+                    class="admin-secondary-button"
+                >
+                    View Portfolio
+                </a>
+
+                <button
+                    type="button"
+                    id="logout-button"
+                    class="admin-secondary-button"
+                >
+                    Sign Out
+                </button>
+
+            </div>
+
+            <div class="admin-projects">
+
+                <div class="admin-projects-header">
+                    <h2>
+                        Projects
+                    </h2>
+
+                    <p>
+                        Your portfolio projects will appear here.
+                    </p>
+                </div>
+
+                <div id="admin-project-list">
+                    Loading projects...
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script
+        type="module"
+        src="../js/admin-dashboard.js"
+    ></script>
+
+</body>
+
+</html>

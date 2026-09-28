@@ -1,0 +1,36 @@
+:root {
+    --background: #0B1220;
+    --surface: #111827;
+
+    --text: #F8FAFC;
+    --text-muted: #94A3B8;
+
+    --accent: #38BDF8;
+    --border: #1E293B;
+
+    --font-main: Arial, Helvetica, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+
+    background: var(--background);
+    color: var(--text);
+
+    font-family: var(--font-main);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}

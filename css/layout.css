@@ -1,0 +1,118 @@
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    width: 100%;
+
+    background: var(--background);
+
+    border-bottom: 1px solid var(--border);
+}
+
+.site-nav {
+    width: min(1200px, 92%);
+    min-height: 78px;
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 40px;
+}
+
+
+/* WORDMARK */
+
+.site-brand {
+    display: inline-block;
+
+    color: var(--text);
+
+    font-size: 1.05rem;
+    font-weight: 800;
+
+    letter-spacing: 0.12em;
+    line-height: 1;
+
+    white-space: nowrap;
+}
+
+.site-brand:hover {
+    color: var(--accent);
+}
+
+
+/* NAVIGATION */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+
+    gap: 32px;
+}
+
+.nav-links a {
+    position: relative;
+
+    color: var(--text-muted);
+
+    font-size: 0.9rem;
+    font-weight: 500;
+
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--text);
+}
+
+
+/* ACTIVE LINK */
+
+.nav-links a.active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: -9px;
+
+    height: 1px;
+
+    background: var(--accent);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .site-nav {
+        min-height: auto;
+
+        padding: 20px 0;
+
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 20px;
+    }
+
+    .site-brand {
+        font-size: 0.95rem;
+    }
+
+    .nav-links {
+        width: 100%;
+
+        gap: 22px;
+
+        flex-wrap: wrap;
+    }
+
+}

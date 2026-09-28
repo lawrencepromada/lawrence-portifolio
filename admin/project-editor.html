@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Add Project | Lawrence Pro Mada</title>
+
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+
+<body>
+
+    <main class="admin-page">
+
+        <section class="admin-dashboard">
+
+            <p class="admin-eyebrow">
+                LAWRENCE PRO MADA
+            </p>
+
+            <h1>
+                Add Project
+            </h1>
+
+            <p class="admin-intro">
+                Add a project to your portfolio.
+            </p>
+
+            <form id="project-form">
+
+                <div class="admin-field">
+                    <label for="title">
+                        Project Title
+                    </label>
+
+                    <input
+                        type="text"
+                        id="title"
+                        required
+                    >
+                </div>
+
+
+                <div class="admin-field">
+                    <label for="slug">
+                        Slug
+                    </label>
+
+                    <input
+                        type="text"
+                        id="slug"
+                        placeholder="lawrean-kompa"
+                        required
+                    >
+                </div>
+
+
+                <div class="admin-field">
+                    <label for="status">
+                        Status
+                    </label>
+
+                    <input
+                        type="text"
+                        id="status"
+                        placeholder="COMPLETED"
+                        required
+                    >
+                </div>
+
+
+                <div class="admin-field">
+                    <label for="shortDescription">
+                        Short Description
+                    </label>
+
+                    <textarea
+                        id="shortDescription"
+                        rows="4"
+                        required
+                    ></textarea>
+                </div>
+
+
+                <div class="admin-field">
+                    <label for="description">
+                        Description
+                    </label>
+
+                    <textarea
+                        id="description"
+                        rows="7"
+                    ></textarea>
+                </div>
+
+
+                <div class="admin-field">
+                    <label for="technologies">
+                        Technologies
+                    </label>
+
+                    <input
+                        type="text"
+                        id="technologies"
+                        placeholder="Python, FastAPI, PyMuPDF"
+                    >
+                </div>
+
+
+                <div class="admin-field">
+                    <label for="features">
+                        Features
+                    </label>
+
+                    <textarea
+                        id="features"
+                        rows="5"
+                        placeholder="PDF comparison, File validation, Automated testing"
+                    ></textarea>
+
+                    <p class="admin-field-help">
+                        Separate features with commas.
+                    </p>
+                </div>
+
+
+                <div class="admin-field">
+                    <label for="githubUrl">
+                        GitHub URL
+                    </label>
+
+                    <input
+                        type="url"
+                        id="githubUrl"
+                        placeholder="https://github.com/..."
+                    >
+                </div>
+
+
+                <div class="admin-field">
+                    <label for="demoUrl">
+                        Demo URL
+                    </label>
+
+                    <input
+                        type="url"
+                        id="demoUrl"
+                        placeholder="https://..."
+                    >
+                </div>
+
+
+                <div class="admin-field">
+                    <label for="coverImage">
+                        Cover Image
+                    </label>
+
+                    <input
+                        type="text"
+                        id="coverImage"
+                        placeholder="images/projects/project-cover.jpg"
+                    >
+                </div>
+
+
+                <div class="admin-field">
+                    <label for="images">
+                        Images
+                    </label>
+
+                    <textarea
+                        id="images"
+                        rows="4"
+                        placeholder="image1.jpg, image2.jpg"
+                    ></textarea>
+
+                    <p class="admin-field-help">
+                        Separate image paths with commas.
+                    </p>
+                </div>
+
+
+                <div class="admin-field">
+                    <label for="problem">
+                        Problem
+                    </label>
+
+                    <textarea
+                        id="problem"
+                        rows="6"
+                    ></textarea>
+                </div>
+
+
+                <div class="admin-field">
+                    <label for="solution">
+                        Solution
+                    </label>
+
+                    <textarea
+                        id="solution"
+                        rows="6"
+                    ></textarea>
+                </div>
+
+
+                <div class="admin-field">
+                    <label for="development">
+                        Development
+                    </label>
+
+                    <textarea
+                        id="development"
+                        rows="6"
+                    ></textarea>
+                </div>
+
+
+                <div class="admin-field">
+                    <label for="result">
+                        Result
+                    </label>
+
+                    <textarea
+                        id="result"
+                        rows="6"
+                    ></textarea>
+                </div>
+
+
+                <div class="admin-dashboard-actions">
+
+                    <button
+                        type="submit"
+                        class="admin-button"
+                    >
+                        Save Project
+                    </button>
+
+                    <a
+                        href="dashboard.html"
+                        class="admin-secondary-button"
+                    >
+                        Cancel
+                    </a>
+
+                </div>
+
+
+                <p
+                    id="project-message"
+                    class="admin-message"
+                ></p>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <script
+        type="module"
+        src="../js/project-editor.js"
+    ></script>
+
+</body>
+
+</html>

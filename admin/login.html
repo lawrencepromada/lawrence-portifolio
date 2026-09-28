@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Login | Lawrence Pro Mada</title>
+
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+
+<body>
+
+    <main class="admin-page">
+
+        <section class="admin-login">
+
+            <p class="admin-eyebrow">
+                LAWRENCE PRO MADA
+            </p>
+
+            <h1>
+                Admin Login
+            </h1>
+
+            <p class="admin-intro">
+                Sign in to manage portfolio projects.
+            </p>
+
+            <form id="login-form">
+
+                <div class="admin-field">
+                    <label for="email">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        required
+                        autocomplete="email"
+                    >
+                </div>
+
+                <div class="admin-field">
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        required
+                        autocomplete="current-password"
+                    >
+                </div>
+
+                <button
+                    type="submit"
+                    class="admin-button"
+                >
+                    Sign In
+                </button>
+
+                <p
+                    id="login-message"
+                    class="admin-message"
+                ></p>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <script
+        type="module"
+        src="../js/admin-login.js"
+    ></script>
+
+</body>
+
+</html>
