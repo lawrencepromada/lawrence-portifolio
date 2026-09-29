@@ -45,12 +45,16 @@
 
     letter-spacing: -0.05em;
 
-    overflow-wrap: break-word;
+    overflow-wrap: anywhere;
 }
 
 
 .project-page-intro {
     max-width: 650px;
+
+    min-width: 0;
+
+    overflow-wrap: anywhere;
 }
 
 
@@ -99,6 +103,10 @@
 
 .project-section-content {
     max-width: 700px;
+
+    min-width: 0;
+
+    overflow-wrap: anywhere;
 }
 
 
