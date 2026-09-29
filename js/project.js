@@ -44,6 +44,9 @@ const projectGithub =
 const projectDemo =
     document.getElementById("project-demo");
 
+const projectCoverImage =
+    document.getElementById("project-cover-image");
+
 
 const params =
     new URLSearchParams(
@@ -119,10 +122,25 @@ async function loadProject() {
         projectShortDescription.textContent =
             project.shortDescription || "";
 
+if (project.coverImage) {
+    projectCoverImage.src = project.coverImage;
+    projectCoverImage.alt =
+        `${project.title || "Project"} cover image`;
+    } else {
+    projectCoverImage.parentElement.style.display = "none";
+}
+
 
         projectDescription.textContent =
             project.description || "";
 
+if (project.coverImage) {
+    projectCoverImage.src = project.coverImage;
+    projectCoverImage.alt =
+        `${project.title || "Project"} cover image`;
+ } else {
+    projectCoverImage.parentElement.style.display = "none";
+}
 
         projectTechnologies.textContent =
             project.technologies || "";
