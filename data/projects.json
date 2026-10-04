@@ -1,0 +1,19 @@
+[
+    {
+        "images": "",
+        "title": "Lawrean Nexus",
+        "solution": "Lawrean Nexus is planned as a centralized platform where an organization can manage its learning resources and turn those resources into structured digital learning experiences, while keeping control of its own content and users.",
+        "result": "Planning stage - implementation has not yet begun.",
+        "features": "",
+        "technologies": "Flutter, Dart, Firebase, Firestore, Firebase Authentication, Firebase Storage, HTML, CSS, JavaScript",
+        "coverImage": "",
+        "problem": "Churches, ministries, and other organizations often have valuable teaching and learning materials distributed across documents, recordings, messaging platforms, and physical storage. This can make resources difficult to organize, find, protect, and reuse for structured learning.",
+        "demoUrl": "",
+        "development": "The project is currently in the planning stage. Product requirements, platform architecture, resource management, learning workflows, authentication, storage, administration, and monetization models are being defined before implementation begins.",
+        "description": "Lawrean Nexus is a planned digital learning and resource management platform being developed under the Veran product direction.\n\nThe initial focus is on helping churches and ministries organize and deliver their educational content digitally. The platform is intended to provide a centralized library for resources such as PDF documents, Word documents, spreadsheets, audio recordings, and video tutorials, while also supporting structured courses and learning programs.\n\nBeyond simple file storage, Lawrean Nexus is planned to support organized learning experiences such as discipleship courses, assessments, automatic marking, certificates, and qualifications. The long-term vision is for the platform to become useful beyond churches and ministries, potentially supporting other institutions such as training organizations and universities.\n\nThe project is currently in the planning and product-definition stage. The architecture, subscription model, administration system, storage strategy, course structure, and other technical decisions will be developed progressively as the product moves toward implementation.",
+        "status": "Planning",
+        "shortDescription": "A digital learning and resource platform designed to help churches and other organizations manage educational content, courses, assessments, certificates, and digital resources in one place.",
+        "slug": "lawrean-nexus",
+        "githubUrl": ""
+    }
+]
