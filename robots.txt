@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://madara-lawrence.netlify.app/sitemap.xml

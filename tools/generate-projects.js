@@ -292,7 +292,36 @@ async function createProjectsPage(projects) {
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>Projects | Lawrence Pro Mada</title>
+    <title>Projects | Madara Lawrence — Lawrence Pro Mada</title>
+
+    <meta
+        name="description"
+        content="Explore software projects and digital work built by Madara Lawrence, professionally known as Lawrence Pro Mada."
+    >
+
+    <meta name="robots" content="index, follow">
+
+    <link
+        rel="canonical"
+        href="https://madara-lawrence.netlify.app/pages/projects.html"
+    >
+
+    <meta
+        property="og:title"
+        content="Projects | Madara Lawrence — Lawrence Pro Mada"
+    >
+
+    <meta
+        property="og:description"
+        content="Explore software projects and digital work built by Madara Lawrence, professionally known as Lawrence Pro Mada."
+    >
+
+    <meta
+        property="og:url"
+        content="https://madara-lawrence.netlify.app/pages/projects.html"
+    >
+
+    <meta property="og:type" content="website">
 
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/layout.css">
@@ -706,6 +735,11 @@ function createProjectPage(project) {
             : "";
 
 
+    const projectDescription =
+        project.shortDescription ||
+        `Explore ${project.title || "this software project"}, built by Madara Lawrence, professionally known as Lawrence Pro Mada.`;
+
+
     return `<!DOCTYPE html>
 <html lang="en">
 
@@ -720,8 +754,37 @@ function createProjectPage(project) {
 
     <title>
         ${escapeHtml(project.title || "Project")}
-        | Lawrence Pro Mada
+        | Madara Lawrence — Lawrence Pro Mada
     </title>
+
+    <meta
+        name="description"
+        content="${escapeHtml(projectDescription)}"
+    >
+
+    <meta name="robots" content="index, follow">
+
+    <link
+        rel="canonical"
+        href="https://madara-lawrence.netlify.app/projects/${escapeHtml(project.slug || "")}.html"
+    >
+
+    <meta
+        property="og:title"
+        content="${escapeHtml(project.title || "Project")} | Madara Lawrence"
+    >
+
+    <meta
+        property="og:description"
+        content="${escapeHtml(projectDescription)}"
+    >
+
+    <meta
+        property="og:url"
+        content="https://madara-lawrence.netlify.app/projects/${escapeHtml(project.slug || "")}.html"
+    >
+
+    <meta property="og:type" content="website">
 
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/layout.css">
@@ -1018,7 +1081,7 @@ function createProjectPage(project) {
                     </a>
 
                     <a
-                        href="https://www.tiktok.com/@lawrencepro.mada"
+                        href="https://www.tiktok.com/@lawrence.pro.mada"
                         target="_blank"
                     >
                         TikTok
