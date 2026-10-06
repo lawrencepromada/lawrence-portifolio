@@ -28,8 +28,10 @@ const app =
 const db =
     getFirestore(app);
 
+
 import {
     writeFile,
+    readFile,
     mkdir
 } from "node:fs/promises";
 
@@ -125,12 +127,24 @@ async function generateProjects() {
         "Updated data/projects.json"
     );
 
+
     await createProjectsPage(
-    projects
-);
+        projects
+    );
+
 
     console.log(
         "Updated pages/projects.html"
+    );
+
+
+    await createHomePage(
+        projects
+    );
+
+
+    console.log(
+        "Updated index.html"
     );
 
 
@@ -201,6 +215,7 @@ function escapeHtml(value) {
             "&#039;"
         );
 }
+
 
 async function createProjectsPage(projects) {
 
@@ -478,6 +493,146 @@ async function createProjectsPage(projects) {
         "utf8"
     );
 }
+
+
+async function createHomePage(projects) {
+
+    const projectsMarkup =
+        projects
+            .filter(
+                project =>
+                    project.slug
+            )
+            .map(
+                project => `
+
+        <article class="project-preview">
+
+            <div class="project-preview-main">
+
+                <div class="project-preview-heading">
+
+                    <h3>
+                        ${escapeHtml(project.title)}
+                    </h3>
+
+                    <span class="project-status">
+                        ${escapeHtml(project.status)}
+                    </span>
+
+                </div>
+
+
+                <p>
+                    ${escapeHtml(project.shortDescription)}
+                </p>
+
+            </div>
+
+
+            <a
+                href="projects/${escapeHtml(project.slug)}.html"
+                class="project-preview-link"
+            >
+                View Project →
+            </a>
+
+        </article>
+
+            `
+            )
+            .join("");
+
+
+    const projectsList =
+        projectsMarkup ||
+        `
+            <p class="projects-loading">
+                No projects available yet.
+            </p>
+        `;
+
+
+    const indexPath =
+        path.resolve(
+            toolsDirectory,
+            "../index.html"
+        );
+
+
+    const currentIndex =
+        await readFile(
+            indexPath,
+            "utf8"
+        );
+
+
+    const startMarker =
+        "<!-- PROJECTS_PREVIEW_START -->";
+
+
+    const endMarker =
+        "<!-- PROJECTS_PREVIEW_END -->";
+
+
+    const startIndex =
+        currentIndex.indexOf(
+            startMarker
+        );
+
+
+    if (startIndex === -1) {
+
+        throw new Error(
+            "Could not find homepage projects start marker."
+        );
+
+    }
+
+
+    const contentStart =
+        startIndex +
+        startMarker.length;
+
+
+    const endIndex =
+        currentIndex.indexOf(
+            endMarker,
+            contentStart
+        );
+
+
+    if (endIndex === -1) {
+
+        throw new Error(
+            "Could not find homepage projects end marker."
+        );
+
+    }
+
+
+    const updatedIndex =
+        currentIndex.slice(
+            0,
+            contentStart
+        ) +
+        `
+
+            ${projectsList}
+
+        ` +
+        currentIndex.slice(
+            endIndex
+        );
+
+
+    await writeFile(
+        indexPath,
+        updatedIndex,
+        "utf8"
+    );
+}
+
 
 function createProjectPage(project) {
 
