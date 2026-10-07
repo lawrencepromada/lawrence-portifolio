@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Lawrean Kompa
+        | Madara Lawrence — Lawrence Pro Mada
+    </title>
+
+    <meta
+        name="description"
+        content="A browser-based prototype for comparing two versions of a commercial offer PDF and identifying substantive changes, discrepancies, and supporting source evidence."
+    >
+
+    <meta name="robots" content="index, follow">
+
+    <link
+        rel="canonical"
+        href="https://madara-lawrence.netlify.app/projects/lawrean-kompa.html"
+    >
+
+    <meta
+        property="og:title"
+        content="Lawrean Kompa | Madara Lawrence"
+    >
+
+    <meta
+        property="og:description"
+        content="A browser-based prototype for comparing two versions of a commercial offer PDF and identifying substantive changes, discrepancies, and supporting source evidence."
+    >
+
+    <meta
+        property="og:url"
+        content="https://madara-lawrence.netlify.app/projects/lawrean-kompa.html"
+    >
+
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/project.css">
+
+</head>
+
+
+<body>
+
+    <header class="site-header">
+
+        <nav class="site-nav">
+
+            <a href="../index.html" class="site-brand">
+                LAWRENCE PRO MADA
+            </a>
+
+            <div class="nav-links">
+
+                <a href="../index.html">
+                    Home
+                </a>
+
+                <a href="../pages/projects.html" class="active">
+                    Projects
+                </a>
+
+                <a href="../pages/about.html">
+                    About
+                </a>
+
+                <a href="../pages/contact.html">
+                    Contact
+                </a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <section class="project-page">
+
+            <div class="project-page-header">
+
+                <div class="project-page-title">
+
+                    <p class="section-eyebrow">
+                        Completed
+                    </p>
+
+                    <h1>
+                        Lawrean Kompa
+                    </h1>
+
+                </div>
+
+
+                <div class="project-page-intro">
+
+                    <p>
+                        A browser-based prototype for comparing two versions of a commercial offer PDF and identifying substantive changes, discrepancies, and supporting source evidence.
+                    </p>
+
+                    <p>
+                        React, Vite, JavaScript, CSS, Python, FastAPI, PyMuPDF, FastEmbed, NumPy
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            
+
+
+            <section class="project-section">
+
+                <div class="project-section-label">
+
+                    <p class="section-eyebrow">
+                        OVERVIEW
+                    </p>
+
+                </div>
+
+
+                <div class="project-section-content">
+
+                    <p>
+                        Lawrean Kompa is a document comparison tool designed to analyze two versions of a commercial offer PDF and identify meaningful changes between them. It extracts structured information from the documents, matches corresponding line items, compares quantities, prices, totals, delivery details, and other commercial information, and presents the differences with references back to the source documents.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <section class="project-section">
+
+                <div class="project-section-label">
+
+                    <p class="section-eyebrow">
+                        THE PROBLEM
+                    </p>
+
+                </div>
+
+
+                <div class="project-section-content">
+
+                    <p>
+                        Comparing revised commercial offer documents manually can make it difficult to identify every changed line item, price, quantity, total, or other important commercial detail. Small changes can easily be overlooked, especially when items are reordered or described differently between document versions.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <section class="project-section">
+
+                <div class="project-section-label">
+
+                    <p class="section-eyebrow">
+                        THE SOLUTION
+                    </p>
+
+                </div>
+
+
+                <div class="project-section-content">
+
+                    <p>
+                        Lawrean Kompa automates the comparison process by extracting information from both PDF versions, matching corresponding line items, comparing their values, recalculating totals, and presenting detected changes together with source evidence from the original documents.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <section class="project-section">
+
+                <div class="project-section-label">
+
+                    <p class="section-eyebrow">
+                        FEATURES
+                    </p>
+
+                </div>
+
+
+                <div class="project-section-content project-features">
+
+                    
+                    <p class="project-feature">
+                        → PDF document comparison
+                    </p>
+                
+                    <p class="project-feature">
+                        → Structured PDF extraction
+                    </p>
+                
+                    <p class="project-feature">
+                        → Line-item matching
+                    </p>
+                
+                    <p class="project-feature">
+                        → Semantic matching
+                    </p>
+                
+                    <p class="project-feature">
+                        → Quantity and price comparison
+                    </p>
+                
+                    <p class="project-feature">
+                        → Total recalculation
+                    </p>
+                
+                    <p class="project-feature">
+                        → Arithmetic discrepancy detection
+                    </p>
+                
+                    <p class="project-feature">
+                        → Source evidence references
+                    </p>
+                
+                    <p class="project-feature">
+                        → Uncertain-match handling
+                    </p>
+                
+                    <p class="project-feature">
+                        → Automated testing
+                    </p>
+                
+
+                </div>
+
+            </section>
+
+
+            <section class="project-section">
+
+                <div class="project-section-label">
+
+                    <p class="section-eyebrow">
+                        DEVELOPMENT
+                    </p>
+
+                </div>
+
+
+                <div class="project-section-content">
+
+                    <p>
+                        The system was developed with a React and Vite frontend connected to a FastAPI backend. PDF documents are processed with PyMuPDF, while semantic matching helps identify corresponding line items even when their names or ordering differ. Deterministic calculations and comparison logic are then used to verify quantities, prices, totals, and other commercial changes.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <section class="project-section">
+
+                <div class="project-section-label">
+
+                    <p class="section-eyebrow">
+                        RESULT
+                    </p>
+
+                </div>
+
+
+                <div class="project-section-content">
+
+                    <p>
+                        A working document comparison tool that can analyze commercial offer revisions, identify expected changes, flag discrepancies, and provide traceable source references for its findings.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <section class="project-links-section">
+
+                <div class="project-links">
+
+                    
+                <a
+                    href="https://github.com/lawrencepromada/lawrean-kompa"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    View on GitHub →
+                </a>
+            
+
+                    
+                <a
+                    href="https://frontend-ten-gamma-54.vercel.app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    View Live Project →
+                </a>
+            
+
+                </div>
+
+            </section>
+
+        </section>
+
+    </main>
+
+
+    <footer class="site-footer">
+
+        <div class="site-footer-inner">
+
+            <div class="site-footer-main">
+
+                <div class="site-footer-brand">
+
+                    <a
+                        href="../index.html"
+                        class="footer-brand"
+                    >
+                        LAWRENCE PRO MADA
+                    </a>
+
+                    <p>
+                        Building practical digital solutions
+                        and bringing ideas into existence.
+                    </p>
+
+                </div>
+
+
+                <div class="site-footer-contact">
+
+                    <p class="footer-label">
+                        CONTACT
+                    </p>
+
+                    <a href="tel:+256753286080">
+                        +256 753 286 080
+                    </a>
+
+                    <a
+                        href="https://wa.me/256794472573"
+                        target="_blank"
+                    >
+                        WhatsApp
+                    </a>
+
+                    <a href="../admin/login.html">
+                        Admin Login →
+                    </a>
+
+                </div>
+
+
+                <div class="site-footer-links">
+
+                    <p class="footer-label">
+                        CONNECT
+                    </p>
+
+                    <a
+                        href="https://linkedin.com/in/madara-lawrence-aa08933b5"
+                        target="_blank"
+                    >
+                        LinkedIn
+                    </a>
+
+                    <a
+                        href="https://github.com/lawrencepromada"
+                        target="_blank"
+                    >
+                        GitHub
+                    </a>
+
+                    <a
+                        href="https://www.tiktok.com/@lawrence.pro.mada"
+                        target="_blank"
+                    >
+                        TikTok
+                    </a>
+
+                    <a
+                        href="https://www.youtube.com/@LawrencePromada-p3c"
+                        target="_blank"
+                    >
+                        YouTube
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="site-footer-bottom">
+
+                <p>
+                    © 2026 Lawrence Pro Mada. All rights reserved.
+                </p>
+
+                <p>
+                    Madara Lawrence
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
